@@ -1,0 +1,176 @@
+:root {
+    --ink: #62400e;
+    --muted: #634f2d;
+    --line: rgba(98, 64, 14, 0.18);
+    --accent: #76500f;
+    --summer-card: rgba(255, 239, 181, 0.97);
+    --summer-card-soft: rgba(255, 248, 218, 0.98);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--ink);
+    background:
+        linear-gradient(135deg, rgba(25, 37, 31, 0.38), rgba(25, 37, 31, 0.22)),
+        url("images/background-img/summer.png") center / cover fixed;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.family-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px max(5vw, calc((100vw - 1000px) / 2));
+    border-bottom: 1px solid var(--line);
+    background: var(--summer-card);
+}
+
+.family-header a {
+    color: var(--ink);
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.family-header span {
+    color: #694511;
+    font-size: 0.82rem;
+    font-weight: 750;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.family-page {
+    width: min(1000px, calc(100% - 36px));
+    margin: 38px auto 60px;
+    padding: clamp(20px, 5vw, 52px);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 26px;
+    background: var(--summer-card);
+    box-shadow: 0 18px 48px rgba(48, 47, 36, 0.12);
+    backdrop-filter: blur(5px);
+}
+
+.family-kicker {
+    margin: 0 0 8px;
+    color: #694511;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#family-heading {
+    margin: 0 0 30px;
+    color: #50350d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.15;
+    text-align: center;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(18px, 4vw, 36px);
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+}
+
+.profile > img {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 10px 24px rgba(45, 37, 27, 0.14);
+}
+
+.profile-text h3 {
+    margin: 0 0 12px;
+    color: #50350d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+    line-height: 1.25;
+}
+
+.profile-text {
+    padding: clamp(14px, 2.5vw, 22px);
+    border: 1px solid rgba(98, 64, 14, 0.12);
+    border-radius: 16px;
+    background: var(--summer-card-soft);
+}
+
+.profile-text p {
+    margin: 0;
+    color: var(--muted);
+}
+
+hr {
+    height: 1px;
+    margin: 0;
+    border: 0;
+    background: var(--line);
+}
+
+.family-return {
+    display: inline-block;
+    margin-top: 18px;
+    color: #365b3d;
+    font-weight: 750;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+:focus-visible {
+    outline: 3px solid #d69450;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .family-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+        padding: 14px 18px;
+    }
+
+    .family-page {
+        width: calc(100% - 22px);
+        margin: 16px auto 30px;
+        padding: 22px 18px;
+        border-radius: 20px;
+    }
+
+    .profile {
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 16px;
+        padding: 20px 0;
+    }
+
+    .profile > img {
+        height: 128px;
+    }
+}
+
+@media (max-width: 380px) {
+    .profile {
+        grid-template-columns: 1fr;
+    }
+
+    .profile > img {
+        width: 120px;
+        height: 150px;
+    }
+}
