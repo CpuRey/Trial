@@ -478,7 +478,7 @@ img {
 
 .project-gallery {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
 }
 
@@ -507,6 +507,113 @@ img {
     padding: 10px 13px;
     color: var(--winter-muted);
     font-size: 0.9rem;
+}
+
+.future .project-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+.future .winter-card {
+    min-width: 0;
+    padding: clamp(16px, 2.5vw, 24px);
+    border: 1px solid rgba(36, 70, 91, 0.14);
+    border-radius: 16px;
+    background: var(--winter-card-soft);
+    box-shadow: 0 8px 22px rgba(45, 57, 66, 0.08);
+}
+
+.future .winter-wide {
+    grid-column: 1 / -1;
+}
+
+.future .winter-card h3,
+.future .winter-card h4,
+.future .winter-card h5 {
+    color: var(--winter-ink);
+}
+
+.future .winter-card h3 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+}
+
+.future .winter-card h4 {
+    margin: 16px 0 6px;
+    font-size: 1rem;
+}
+
+.future .winter-card h5 {
+    margin: 18px 0 8px;
+    font-size: 1rem;
+}
+
+.future .winter-card p {
+    margin: 8px 0;
+    color: var(--winter-muted);
+}
+
+.future .winter-card a {
+    color: #315d77;
+    font-weight: 750;
+}
+
+.future .winter-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.future .winter-gallery figure {
+    border: 1px solid rgba(36, 70, 91, 0.12);
+}
+
+.future .winter-gallery img {
+    height: 180px;
+}
+
+.future .winter-project-images {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.future .winter-project-images img {
+    height: 220px;
+}
+
+.future .winter-game img {
+    width: 100%;
+    height: 220px;
+    margin: 12px 0;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.future .winter-skills p {
+    margin: 5px 0;
+}
+
+@media (max-width: 760px) {
+    .future .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .future .winter-wide {
+        grid-column: auto;
+    }
+
+    .future .winter-gallery,
+    .future .winter-project-images {
+        grid-template-columns: 1fr;
+    }
+
+    .future .winter-gallery img,
+    .future .winter-project-images img,
+    .future .winter-game img {
+        height: auto;
+        max-height: 320px;
+    }
 }
 
 .back-to-top {
