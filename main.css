@@ -576,6 +576,51 @@ img {
     font-weight: 750;
 }
 
+.future .winter-game .game-play-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    margin: 2px 0 12px;
+    padding: 10px 14px;
+    border: 1px solid #315d77;
+    border-radius: 9px;
+    background: #315d77;
+    color: #ffffff;
+    font-size: 0.88rem;
+    line-height: 1.1;
+    text-decoration: none;
+    box-shadow: 0 5px 12px rgba(49, 93, 119, 0.16);
+    transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.future .winter-game .game-play-link:hover {
+    border-color: #24465b;
+    background: #24465b;
+    box-shadow: 0 7px 16px rgba(36, 70, 91, 0.22);
+    transform: translateY(-2px);
+}
+
+.future .winter-game .game-play-link:focus-visible {
+    outline: 3px solid rgba(49, 93, 119, 0.28);
+    outline-offset: 3px;
+}
+
+.future .winter-game .game-note {
+    margin: 0 0 14px;
+    padding: 8px 10px;
+    border-left: 3px solid rgba(49, 93, 119, 0.38);
+    border-radius: 0 6px 6px 0;
+    background: rgba(49, 93, 119, 0.06);
+    color: var(--winter-muted);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.future .winter-game .game-note strong {
+    color: var(--winter-ink);
+}
+
 .future .winter-gallery {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
